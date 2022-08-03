@@ -19,5 +19,5 @@ import java.util.function.Function;
 @Repository
 public interface StudentRepository extends JpaRepository<Student, String> {
 
-    public Student findByStudent(String Name);
+    // Student findByStudent(String Name);
 }

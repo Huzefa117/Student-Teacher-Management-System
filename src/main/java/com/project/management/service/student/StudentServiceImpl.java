@@ -16,9 +16,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student saveStudent(Student StudentJson) {
+    public Student saveStudent(Student student) {
         try {
-            return studentRepository.save(StudentJson);
+            return studentRepository.save(student);
         }catch (Exception e){
             return null;
         }

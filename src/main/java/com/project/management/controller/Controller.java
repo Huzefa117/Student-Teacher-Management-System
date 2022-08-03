@@ -5,10 +5,7 @@ import com.project.management.entity.Teacher;
 import com.project.management.service.student.StudentService;
 import com.project.management.service.teacher.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Controller {
@@ -21,7 +18,7 @@ public class Controller {
         return "Hello World";
     }
 
-    @RequestMapping(value = "/createStudent", method = RequestMethod.POST)
+    @PostMapping("/createStudent")
     public Student createStudent(@RequestBody Student student) {
         //return "Studnt";
         return studentService.saveStudent(student);
