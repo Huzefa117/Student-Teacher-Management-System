@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface StudentService {
-     Student saveStudent(String StudentJson) ;
+     Student saveStudent(Student StudentJson) ;
 
 
 }

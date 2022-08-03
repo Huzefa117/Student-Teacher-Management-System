@@ -22,8 +22,9 @@ public class Controller {
     }
 
     @RequestMapping(value = "/createStudent", method = RequestMethod.POST)
-    public Student createStudent(@RequestBody String jsonObject) {
-        return studentService.saveStudent(jsonObject);
+    public Student createStudent(@RequestBody Student student) {
+        //return "Studnt";
+        return studentService.saveStudent(student);
     }
 
     @RequestMapping(value = "/createTeacher", method = RequestMethod.POST)
