@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class ManagementApplication extends SpringBootServletInitializer {
+public class ManagementApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(ManagementApplication.class, args);
