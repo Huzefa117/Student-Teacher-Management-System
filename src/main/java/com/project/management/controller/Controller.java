@@ -1,4 +1,4 @@
-package com.project.management;
+package com.project.management.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
