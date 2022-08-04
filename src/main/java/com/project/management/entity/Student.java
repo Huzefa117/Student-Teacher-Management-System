@@ -21,23 +21,6 @@ public class Student {
     private Long Id;
     private String Name;
     private int Age;
-
-    public int getAge() {
-        return Age;
-    }
-
-    public void setAge(int age) {
-        Age = age;
-    }
-
-    public String getDepartment() {
-        return Department;
-    }
-
-    public void setDepartment(String department) {
-        Department = department;
-    }
-
     private String Department;
 
     public Student(String Name) {
@@ -60,6 +43,21 @@ public class Student {
         Name = name;
     }
 
+    public int getAge() {
+        return Age;
+    }
+
+    public void setAge(int age) {
+        Age = age;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
 
 
 }
