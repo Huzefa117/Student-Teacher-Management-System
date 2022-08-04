@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -17,7 +19,7 @@ import javax.persistence.Id;
 @Builder
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = SEQUENCE)
     private Long Id;
     private String Name;
     private int Age;
