@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServiceImpl implements StudentService {
 
+
     @Autowired
     private StudentRepository studentRepository;
 
@@ -18,8 +19,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student saveStudent(Student student) {
         try {
-            return studentRepository.save(student);
-        }catch (Exception e){
+            Student student1 = studentRepository.save(student);
+            return student1;
+        } catch (Exception e) {
             return null;
         }
     }

@@ -6,10 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.List;
-import java.util.UUID;
-
 
 @Entity
 @Data
@@ -18,21 +17,38 @@ import java.util.UUID;
 @Builder
 public class Student {
     @Id
-    private String Id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long Id;
     private String Name;
-    private boolean ArtificialIntelligence;
-    private boolean DataStructures;
-    private boolean Algorithms;
+    private int Age;
 
-    public Student(String Name){
-        this.Id = UUID.randomUUID().toString();
+    public int getAge() {
+        return Age;
+    }
+
+    public void setAge(int age) {
+        Age = age;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
+
+    private String Department;
+
+    public Student(String Name) {
         this.Name = Name;
     }
-    public String getId() {
+
+    public Long getId() {
         return Id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         Id = id;
     }
 
@@ -44,29 +60,6 @@ public class Student {
         Name = name;
     }
 
-    public boolean isArtificialIntelligence() {
-        return ArtificialIntelligence;
-    }
-
-    public void setArtificialIntelligence(boolean artificialIntelligence) {
-        ArtificialIntelligence = artificialIntelligence;
-    }
-
-    public boolean isDataStructures() {
-        return DataStructures;
-    }
-
-    public void setDataStructures(boolean dataStructures) {
-        DataStructures = dataStructures;
-    }
-
-    public boolean isAlgorithms() {
-        return Algorithms;
-    }
-
-    public void setAlgorithms(boolean algorithms) {
-        Algorithms = algorithms;
-    }
 
 
 }

@@ -4,5 +4,5 @@ import com.project.management.entity.Teacher;
 
 public interface TeacherService {
 
-    Teacher saveTeacher(String TeacherJson);
+    Teacher saveTeacher(Teacher TeacherJson);
 }

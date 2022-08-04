@@ -12,6 +12,7 @@ public class Controller {
 
     @Autowired
     private StudentService studentService;
+    @Autowired
     private TeacherService teacherService;
     @RequestMapping("/")
     public String reqMethod() {
@@ -24,8 +25,8 @@ public class Controller {
         return studentService.saveStudent(student);
     }
 
-    @RequestMapping(value = "/createTeacher", method = RequestMethod.POST)
-    public Teacher createTeacher(@RequestBody String jsonObject) {
-        return teacherService.saveTeacher(jsonObject);
+    @PostMapping("/createTeacher")
+    public Teacher createTeacher(@RequestBody Teacher teacher) {
+        return teacherService.saveTeacher(teacher);
     }
 }

@@ -1,23 +1,36 @@
 package com.project.management.entity;
 
-import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Teacher {
-    private String Id;
+    @Id
+    @GeneratedValue
+    private Long Id;
     private String Name;
     private String Subject;
 
-    public Teacher(String Name, String Subject){
-        this.Id = UUID.randomUUID().toString();
-        this.Name = Name;
-        this.Subject = Subject;
+    public Teacher(String name, String subject) {
+        Name = name;
+        Subject = subject;
     }
 
-    public String getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         Id = id;
     }
 
