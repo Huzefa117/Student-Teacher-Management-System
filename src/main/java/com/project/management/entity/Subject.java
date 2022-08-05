@@ -20,5 +20,6 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long Id;
     private String Name;
-    private Long studentId;
+    private String description;
+    private int coursePrice;
 }

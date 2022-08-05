@@ -30,6 +30,11 @@ public class Controller {
         //return "Studnt";
         return studentService.saveStudent(student);
     }
+    @PostMapping("/createStudentWithSubject")
+    public Student createStudentWithSubject(@RequestBody Student student) {
+        //return "Studnt";
+        return studentService.saveStudentWithSubjects(student);
+    }
 
     @PostMapping("/createTeacher")
     public Teacher createTeacher(@RequestBody Teacher teacher) {
@@ -41,8 +46,8 @@ public class Controller {
         return subjectService.saveSubject(subject);
     }
 
-    @GetMapping("/getStudentsBasedOnSubject/{subject}/{studentId}")
-    public List<Student> getStudents(@PathVariable String subject, @PathVariable Long studentId){
-        return subjectService.fetchStudents()
-    }
+//    @GetMapping("/getStudentsBasedOnSubject/{subject}/{studentId}")
+//    public List<Student> getStudents(@PathVariable String subject, @PathVariable Long studentId){
+//        //return subjectService.fetchStudents()
+//    }
 }

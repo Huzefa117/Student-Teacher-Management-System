@@ -5,6 +5,8 @@ import com.project.management.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
 
@@ -18,6 +20,16 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student saveStudent(Student student) {
+        try {
+            Student student1 = studentRepository.save(student);
+            return student1;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public Student saveStudentWithSubjects(Student student) {
         try {
             Student student1 = studentRepository.save(student);
             return student1;
