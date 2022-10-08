@@ -19,11 +19,12 @@ import javax.persistence.Id;
 @Builder
 public class Student {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String Name;
     private int Age;
     private String Department;
-    private String subjectId;
+    private Long subjectId;
 
 
 
