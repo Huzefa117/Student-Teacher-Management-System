@@ -13,11 +13,9 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Teacher {
+public class Subject {
     @Id
-    private Long Id;
-    private String Name;
-    private String SubjectId;
-    private String SubjectName;
-
+    private Long id;
+    private String subjectName;
+    private String credits;
 }
